@@ -2849,7 +2849,7 @@ type these numbers to confirm: `
                    TransCh.send(
                     `**:money_with_wings: | Transfer Receipt **\`\`\`You Have Received \`$${resulting.toLocaleString()}\` From User ${
                       message.author.username
-                    }; (ID (${message.author.id})\`\`\``
+                    }; (ID (${message.author.id})
                   );
                   m.delete();
                   credits[author].credits += Math.floor(
