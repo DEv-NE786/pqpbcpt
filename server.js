@@ -1,15 +1,3 @@
-require("events").EventEmitter.defaultMaxListeners = 200;
-const http = require("http");
-const express = require("express");
-const app = express();
-app.get("/", (request, response) => {
-  response.sendStatus(200);
-});
-app.listen(process.env.PORT);
-setInterval(() => {
-  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 280000);
-
 ////بكجات
 const { Client, RichEmbed } = require("discord.js");
 var { Util } = require("discord.js");
@@ -2854,6 +2842,11 @@ type these numbers to confirm: `
                     }, Done Trans \`$${resulting.toLocaleString()}\` To ${mentionn}**`
                   );
                   mention.send(
+                    `**:money_with_wings: | Transfer Receipt **\`\`\`You Have Received \`$${resulting.toLocaleString()}\` From User ${
+                      message.author.username
+                    }; (ID (${message.author.id})\`\`\``
+                   var TransCh = client.channels.find(channels => channels.id == "741810322666553405");
+                   TransCh.send(
                     `**:money_with_wings: | Transfer Receipt **\`\`\`You Have Received \`$${resulting.toLocaleString()}\` From User ${
                       message.author.username
                     }; (ID (${message.author.id})\`\`\``
